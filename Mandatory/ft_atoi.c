@@ -6,7 +6,7 @@
 /*   By: slimane <slimane@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/16 10:11:51 by slimane           #+#    #+#             */
-/*   Updated: 2025/02/15 21:18:22 by slimane          ###   ########.fr       */
+/*   Updated: 2025/02/23 20:26:18 by slimane          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ double	ft_help_atof(const char *str, double sign, int *i, int *check)
 	double	result;
 
 	div = 1.0;
+	if (str[*i] == '.')
+		return (*check = 1, *check);
 	while (str[*i] >= '0' && str[*i] <= '9')
 	{
 		result = result * 10.0 + (str[*i] - '0');

@@ -1,5 +1,5 @@
 SRC=Mandatory/fractol.c Mandatory/ft_atoi.c Mandatory/mandel_julia.c Mandatory/draw.c Mandatory/ft_strcmp.c
-BSRC= bonus/fractol_bonus.c bonus/draw_bonus.c bonus/buring_ship_bonus.c
+BSRC= bonus/fractol_bonus.c bonus/draw_bonus.c bonus/buring_ship_bonus.c bonus/ft_strcmp_bonus.c
 
 OBJ= ${SRC:.c=.o}
 BOBJ= ${BSRC:.c=.o}

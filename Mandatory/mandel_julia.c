@@ -6,11 +6,27 @@
 /*   By: slimane <slimane@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/08 23:52:36 by slimane           #+#    #+#             */
-/*   Updated: 2025/02/15 22:21:42 by slimane          ###   ########.fr       */
+/*   Updated: 2025/02/22 13:14:49 by slimane          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fractol.h"
+
+void ft_error_nothing(void)
+{
+		write(2, "╔══════════════════════════════════════════╗\n", 134);
+		write(2, "║       Usage: ./fractol <fractal>         ║\n", 50);
+		write(2, "╚══════════════════════════════════════════╝\n", 134);
+		write(2, "           ╔════════════════════╗           \n", 90);
+		write(2, "╔══════════╣ Available fractals ╠══════════╗\n", 94);
+		write(2, "║          ╚════════════════════╝          ║\n", 94);
+		write(2, "║                                          ║\n", 50);
+		write(2, "║                mandelbrot                ║\n", 50);
+		write(2, "║                julia x y                 ║\n", 50);
+		write(2, "║                                          ║\n", 50);
+		write(2, "╚══════════════════════════════════════════╝\n", 134);
+		exit(0);
+}
 
 void	set_complex(t_complex *f, double real, double img)
 {

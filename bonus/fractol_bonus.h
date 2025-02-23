@@ -6,7 +6,7 @@
 /*   By: slimane <slimane@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/14 08:15:34 by slimane           #+#    #+#             */
-/*   Updated: 2025/02/19 11:12:14 by slimane          ###   ########.fr       */
+/*   Updated: 2025/02/22 20:23:22 by slimane          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,5 +50,6 @@ typedef struct s_mlx {
 void	draw_burning_ship(t_mlx *mlx);
 int		burning_ship(double real, double imag);
 double	map(double value, double in_min, double in_max, double out_min, double out_max);
+int		ft_strcmp(char *s1, char *s2);
 
 #endif

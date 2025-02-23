@@ -6,7 +6,7 @@
 /*   By: slimane <slimane@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/02 22:48:38 by slimane           #+#    #+#             */
-/*   Updated: 2025/02/15 22:28:48 by slimane          ###   ########.fr       */
+/*   Updated: 2025/02/23 21:25:43 by slimane          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define FRACTOL_H
 # include <stdlib.h>
 # include <math.h>
+# include <unistd.h>
 # include <mlx.h>
 
 # define WID 700
@@ -46,5 +47,7 @@ double	ft_atof(const char *str, int *check);
 int		mandelbort_julia(double real, double imag, t_mlx *mlx);
 void	draw_mandel_julia(t_mlx *mlx);
 int		ft_strcmp(char *s1, char *s2);
+void	ft_error_nothing(void);
+int		ft_mlx_init_av(t_mlx *mlx, char **av);
 
 #endif

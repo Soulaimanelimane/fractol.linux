@@ -6,7 +6,7 @@
 /*   By: slimane <slimane@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/14 08:15:08 by slimane           #+#    #+#             */
-/*   Updated: 2025/02/19 11:09:59 by slimane          ###   ########.fr       */
+/*   Updated: 2025/02/23 19:43:11 by slimane          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,7 +79,6 @@ int	esc_close(int button, t_mlx *mlx)
 	else if (button == 1)
 	{
 		mlx->color += 2;
-		printf("%d\n", mlx->color);	
 	}
 	draw_burning_ship(mlx);
 	return (0);
@@ -90,6 +89,8 @@ int main(int ac, char *av[]){
     if (ac != 2)
 		return (0);
     t_mlx   mlx;
+	if (ft_strcmp(av[1], "burning_ship\0") != 0)
+		return (write(2, "</burning_ship\n", 16), 1);
     init_mlx(&mlx, av);
 	draw_burning_ship(&mlx);
 	mlx_mouse_hook(mlx.win, zoom_in_out, &mlx);

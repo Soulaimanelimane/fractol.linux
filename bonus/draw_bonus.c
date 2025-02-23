@@ -6,7 +6,7 @@
 /*   By: slimane <slimane@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/15 09:16:22 by slimane           #+#    #+#             */
-/*   Updated: 2025/02/19 11:11:04 by slimane          ###   ########.fr       */
+/*   Updated: 2025/02/22 20:40:58 by slimane          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,8 +37,8 @@ void	burning_ship_pixel(t_mlx *mlx, int x, int y)
 	int		pixl;
 	char	*dest;
 
-	real = map(x, 0, 700, mlx->x_min, mlx->x_max) + mlx->move_x;
-	imag =  map(y, 0, 700, mlx->y_min, mlx->y_max) + mlx->move_y;
+	real = map(x, 0, 700, mlx->x_min, mlx->x_max) - mlx->move_x;
+	imag =  map(y, 0, 700, mlx->y_min, mlx->y_max) - mlx->move_y;
     iter = burning_ship(real, imag);
 	color = get_color(iter, mlx);
 	pixl = (y * mlx->line_length) + (x * (mlx->bpp / 8));
